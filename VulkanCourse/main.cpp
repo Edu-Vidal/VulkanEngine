@@ -10,7 +10,7 @@
 GLFWwindow* window;
 VulkanRenderer vulkanRenderer;
 
-void initWindow(std::string wName = "Janel de teste", const int width = 800, const int height = 600)
+void initWindow(std::string wName = "Janela de teste", const int width = 800, const int height = 600)
 {
 	// Inicializa GLFW
 	glfwInit();
@@ -37,6 +37,8 @@ int main()
 	{
 		glfwPollEvents();
 	}
+
+	vulkanRenderer.cleaup();
 
 	glfwDestroyWindow(window);
 	glfwTerminate();
